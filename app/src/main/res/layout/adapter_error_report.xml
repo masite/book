@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/report_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/sr_check_box"
+        android:drawablePadding="@dimen/row_spacing"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/middle_button_height"
+        android:paddingLeft="@dimen/common_margin"
+        android:paddingRight="@dimen/common_margin"
+        android:text="测试内容"
+        android:textColor="#666666"
+        android:textSize="@dimen/text_size_info" />
+
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/dialog_content"
+    android:background="@drawable/ic_sign_success_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_sign_coin" />
+
+    <TextView
+        android:id="@+id/give_coin"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="30红果币"
+        android:textColor="#f26557"
+        android:textStyle="bold"
+        android:textSize="16sp" />
+
+
+    <TextView
+        android:id="@+id/sign_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="- 您已连续签到1天 -"
+        android:textColor="#a5a5a5"
+        android:textSize="17sp" />
+
+</LinearLayout>

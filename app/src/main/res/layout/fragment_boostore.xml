@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_white"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_recomend_title" />
+
+    <com.hongguo.common.widget.refresh.DesignRefreshLayout
+        android:id="@+id/design_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/content_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.design.widget.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/base_white"
+                android:orientation="vertical"
+                app:elevation="0dp">
+
+                <FrameLayout
+                    app:layout_scrollFlags="scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.hongguo.read.widget.BookStoreBannerView
+                        android:id="@+id/recommend_banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:autoPlayDuration="5000"
+                        app:indicatorMargin="1dp"
+                        app:indicatorShape="oval"
+                        app:indicatorSpace="3dp"
+                        app:scrollDuration="200"
+                        app:selectedIndicatorHeight="5dp"
+                        app:selectedIndicatorWidth="5dp"
+                        app:unSelectedIndicatorColor="#66ffffff"
+                        app:unSelectedIndicatorHeight="5dp"
+                        app:unSelectedIndicatorWidth="5dp" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/ic_slider_cover"
+                        android:layout_gravity="bottom"
+                        />
+                </FrameLayout>
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/vip_tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:tabIndicatorColor="@color/colorPrimary"
+                    app:tabSelectedTextColor="@color/colorPrimary"
+                    app:tabTextColor="#999999" />
+
+                <include layout="@layout/view_line" />
+
+            </android.support.design.widget.AppBarLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vip_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        </android.support.design.widget.CoordinatorLayout>
+    </com.hongguo.common.widget.refresh.DesignRefreshLayout>
+
+</LinearLayout>

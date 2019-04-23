@@ -1,0 +1,62 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+    }
+    dependencies {
+        classpath "com.taobao.android:atlasplugin:2.3.3.rc41"
+        classpath 'com.jakewharton:butterknife-gradle-plugin:8.5.1'
+        classpath 'com.antfortune.freeline:gradle:0.8.8'
+        classpath 'me.tatarka:gradle-retrolambda:3.6.0'
+    }
+}
+
+
+allprojects {
+    repositories {
+        mavenLocal()
+        jcenter()
+        maven { url "https://jitpack.io" }
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+
+/**
+ * APP 常量信息
+ */
+ext {
+
+    //应用版本信息(应用更新必备)
+    APP_VERSION = "1.6.7"
+    APP_CODE = 42
+
+    //应用信息
+    APP_MIN_VEERSION = 17
+    APP_TARGET_VERSION = 26
+
+    //基础版本 "1.6.4"
+    APP_BASE_VERSION = ""
+
+    APP_BASE_LIBRARY = "1.1.5"
+
+    //atlas 核心库
+    ATLAS_CORE_VSERION = "5.0.7.55"
+    //atlas 动态部署
+    ATLAS_UPDATE_VERSION = "1.1.4.14"
+
+    //support包信息
+    GOOGLE_SUPPORT_VERSION = "26.1.0"
+}

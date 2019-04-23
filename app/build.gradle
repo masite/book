@@ -1,0 +1,285 @@
+import org.apache.commons.io.FileUtils
+
+apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'me.tatarka.retrolambda'
+//atlas插件
+apply plugin: 'com.taobao.atlas'
+
+def commonApk = [:]
+
+commonApk."0_d0_hongguo_红果阅读" = stringToList('''\
+        test_test
+//        2145_贱人工具箱
+//        2102_易玩
+//        2147_久久小说
+//        2148_2148
+//        2101_官网
+//        2103_魅族
+//        2104_联想
+//        2105_360市场
+//        2106_豌豆荚
+//        2107_华为
+//        2108_搜狗市场
+//        2109_锤子
+//        2110_木蚂蚁
+//        2111_OPPO
+//        2112_vivo
+//        2113_优亿
+//        2114_乐视
+//        2115_安智
+//        2116_PP助手 
+//        2117_金立
+//        2118_百度
+//        2119_2345
+//        2120_小米
+//        2021_应用汇
+//        2122_应用宝
+//        2123_百度推广
+//        2124_变现猫
+//        2135_游讯
+//        2130_快啦
+//        2125_1j1j
+//        2128_手机56
+//        2129_pp8
+//        2134_499
+//        2131_391k
+//        2132_497
+//        2133_qqxzb
+//        2136_安粉丝
+//        2137_谷歌
+//        2138_应用锁
+//        2139_作业渠道
+//        2140_新渠道
+//        2141_2141
+//        2146_易玩svip测试
+//2150_2150
+//          2151_游迅翻包
+//            2152_2152
+//            2153_2153
+//            2154_2154
+//            2155_2155
+//            2156_2156
+//            2157_2157
+//            2158_2158
+//            2159_2159
+//            2160_2160
+//            2161_2161
+''')
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "27.0.2"
+    defaultConfig {
+        applicationId "com.hongguo.read"
+        minSdkVersion rootProject.ext.APP_MIN_VEERSION
+        targetSdkVersion rootProject.ext.APP_TARGET_VERSION
+        versionCode rootProject.ext.APP_CODE
+        versionName rootProject.ext.APP_VERSION
+        manifestPlaceholders = [SINGLE_BOOK_TYPE: "0", SINGLE_BOOK_ID: "0", LBSW_ALIAS: "hongguo", APP_ICON: "@mipmap/logo_hongguo", LBSW_FROM: "test"]
+        multiDexEnabled true
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+
+        ndk {
+            abiFilters "armeabi"
+        }
+
+    }
+    dexOptions {
+        //最大堆内存
+        javaMaxHeapSize "8g"
+        //是否支持大工程模式
+        jumboMode = true
+        //线程数
+        threadCount = 8
+    }
+    buildTypes {
+        release {
+            //Zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources false
+            //混淆
+            minifyEnabled false
+            //加载默认混淆配置文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            android.applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        def split = variant.productFlavors[0].name.split("_");
+                        //单推包 类别(百度1 or 自己0)_书本id_别名_书名    里面 渠道id_渠道名称
+                        def fileName = "${split[3]}_${split[5]}_V${defaultConfig.versionName}.apk"
+                        def dir = "${outputFile.parent}"
+                        //单推包
+                        if (split[1] != "0") {
+                            dir = "${outputFile.parent}/${split[3]}${defaultConfig.versionName}";
+                        }
+                        File outFile = new File(dir);
+                        if (!outFile.exists()) {
+                            outFile.mkdirs()
+                        }
+                        output.outputFile = new File(dir, fileName)
+                    }
+                }
+            }
+        }
+
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+            proguardFiles 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file('youxunnew.jks')
+            storePassword "992194"
+            keyAlias "打包签名"
+            keyPassword "992194"
+        }
+    }
+
+    productFlavors {
+        commonApk.entrySet().iterator().each { entry ->
+            def chanelStr = ""
+            chanelStr += entry.key
+            entry.value.each { chanel ->
+                "${chanelStr + "_" + chanel}" {
+                }
+            }
+        }
+    }
+
+    productFlavors.all { flavor ->
+        //单推包 类别(百度1 or 自己0)_书本id_别名_书名    里面 渠道id_渠道名称
+        //设置app的名字
+        def split = name.split("_");
+        flavor.manifestPlaceholders = [SINGLE_BOOK_TYPE: split[0], SINGLE_BOOK_ID: split[1], LBSW_ALIAS: name.split("_")[2], APP_ICON: "@mipmap/logo_" + name.split("_")[2], LBSW_FROM: name.split("_")[4]]
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile "com.android.support:appcompat-v7:$rootProject.ext.GOOGLE_SUPPORT_VERSION"
+    compile 'com.android.support.constraint:constraint-layout:1.1.0-beta6'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.13'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.3.1'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.1.2.1'
+    compile project(':common')
+    compile files('libs/Msc.jar')
+    //PushSDK必须依赖基础组件库，所以需要加入对应依赖
+    compile 'com.umeng.sdk:common:1.5.0'
+    //PushSDK必须依赖utdid库，所以需要加入对应依赖
+    compile 'com.umeng.sdk:utdid:1.1.5.3'
+    //PushSDK
+    compile 'com.umeng.sdk:push:4.1.0'
+    compile 'com.android.support:multidex:1.0.2'
+    //atlas 库
+    compile("com.taobao.android:atlas_core:$rootProject.ext.ATLAS_CORE_VSERION@aar") {
+        transitive = true
+    }
+    compile "com.taobao.android:atlasupdate:$rootProject.ext.ATLAS_UPDATE_VERSION@aar"
+}
+
+static def stringToList(str) {
+    def list = new ArrayList<>()
+    str.replace(" ", "").split('\n').each { key -> if (!key.startsWith("//")) list.add(key) }
+    return list
+}
+
+/**
+ * 以下为 atlas 配置信息
+ */
+
+group = "com.hongguo.read"
+version = rootProject.ext.APP_VERSION
+
+atlas {
+    atlasEnabled true
+
+    tBuildConfig {
+//        autoStartBundles = ['com.losg.splash']
+//        outOfApkBundles = ['remote']
+    }
+
+    manifestOptions {
+        addAtlasProxyComponents true
+    }
+
+    patchConfigs {
+        debug {
+            createTPatch true
+        }
+    }
+
+    buildTypes {
+        debug {
+            if (rootProject.ext.APP_BASE_VERSION) {
+                baseApDependency "$group:hgread:$rootProject.ext.APP_BASE_VERSION@ap"
+                patchConfig patchConfigs.debug
+            }
+        }
+    }
+}
+
+/**
+ * 将原有的补丁信息备份到hisTpatch中
+ */
+tasks.whenTaskAdded { task ->
+    if (task.name.contains("DebugAndroidTest")) {
+        task.setEnabled(false)
+    }
+    if (task.name.contains("assemble")) {
+        def files = null
+        def file = new File(task.project.getBuildDir(), "outputs")
+        if (file.exists() && new File(file, "tpatch-debug").exists()) {
+            files = new File(file, "tpatch-debug").listFiles()
+        }
+        if (files != null) {
+            for (File file1 : files) {
+                if (file1.getName().endsWith(".json") || file1.getName().endsWith(".tpatch")) {
+                    if (!new File(task.project.getRootDir(), "hisTpatch").exists()) {
+                        new File(task.project.getRootDir(), "hisTpatch").mkdirs()
+                    }
+                    FileUtils.copyFileToDirectory(file1, new File(task.project.getRootDir(), "hisTpatch"))
+                }
+            }
+        }
+    }
+}
+
+/**
+ * 本地仓库 /Users/losg/.m2/repository
+ */
+apply plugin: 'maven'
+apply plugin: 'maven-publish'
+
+publishing {
+    repositories {
+        mavenLocal()
+    }
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            artifact "${project.buildDir}/outputs/apk/${project.name}-debug.ap"
+            artifactId "hgread"
+        }
+    }
+}
+

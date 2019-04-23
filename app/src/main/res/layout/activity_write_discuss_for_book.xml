@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_color"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/common_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:text="评论内容" />
+
+        <com.hongguo.read.widget.emoji.EmojiconEditText
+            android:id="@+id/emoji_edit"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/bg_common_edit"
+            android:gravity="top"
+            android:hint="写下优质评论，有机会得到作者回复哦（100字以内）"
+            android:padding="@dimen/row_spacing"
+            android:textColorHint="#999999"
+            android:textSize="@dimen/text_size_info" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_size_info"
+            android:text="用户评论须遵守以下事宜:"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="6dp"
+            android:lineSpacingMultiplier="1.2"
+            android:text="① 不评论与书籍无关内容；\n② 不得发布广告；\n③ 不发布谣言，扰乱社会秩序，破坏社会稳定的内容；\n④ 不发布黄赌毒、暴力、凶杀、恐怖或者教唆犯罪的内容；\n⑤ 不评论侮辱或者诽谤他人，侵害他人合法权益的内容；\n⑥ 不评论含有法律、行政法规禁止的其他内容；"
+            android:textSize="@dimen/text_size_hint" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="12dp"
+            android:lineSpacingMultiplier="1.2"
+            android:text="如因用户不遵守本条上述任意一款或者几款的规定，红果阅读有权在不事先通知用户的情况下将相应的内容删除或采取终止、完全或部分中止、限制用户帐号的使用功能或停止用户使用本软件或服务；如造成损失的，红果阅读有权要求用户给予相应的赔偿。"
+            android:textSize="@dimen/text_size_hint" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="对本APP有相关建议可以到意见反馈页面反馈，客服会为您及时处理。"
+            android:textColor="@color/colorPrimary"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/emoji_view"
+        android:background="@color/window_color"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@id/show_emoji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/big_button_height"
+            android:paddingLeft="@dimen/common_margin"
+            android:paddingRight="@dimen/common_margin"
+            android:src="@mipmap/ic_show_emoji"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <com.hongguo.read.widget.emoji.EmojiView
+        android:background="@color/base_white"
+        android:id="@+id/emoji_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+
+</RelativeLayout>

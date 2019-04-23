@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_color"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/chapter_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_toolbar_bg">
+
+        <com.losg.library.widget.TransStatusBar
+            android:id="@+id/chapter_trans_bar"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Space
+            android:id="@+id/space3"
+            android:layout_width="0dp"
+            android:layout_height="?actionBarSize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chapter_trans_bar" />
+
+        <TextView
+            android:id="@+id/chapter_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="章节下载"
+            android:textColor="@color/white"
+            android:textSize="@dimen/base_title_size"
+            app:layout_constraintBottom_toBottomOf="@+id/space3"
+            app:layout_constraintEnd_toEndOf="@+id/space3"
+            app:layout_constraintStart_toStartOf="@+id/chatper_back"
+            app:layout_constraintTop_toBottomOf="@+id/chapter_trans_bar" />
+
+        <ImageView
+            android:id="@+id/chatper_back"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:paddingLeft="@dimen/common_margin"
+            android:paddingRight="@dimen/common_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/space3"
+            app:layout_constraintTop_toTopOf="@+id/space3"
+            app:srcCompat="@mipmap/ic_toolbar_back" />
+
+        <TextView
+            android:id="@+id/chapter_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:drawablePadding="@dimen/line_space"
+            android:drawableRight="@mipmap/ic_down_white"
+            android:gravity="center"
+            android:paddingLeft="@dimen/row_spacing"
+            android:paddingRight="@dimen/common_margin"
+            android:text="筛选"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/space3"
+            app:layout_constraintTop_toTopOf="@+id/space3" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/down_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/chapter_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:overScrollMode="never" />
+
+        <include layout="@layout/view_line" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/buy_info_panel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:clickable="true"
+            android:paddingBottom="@dimen/row_spacing"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/orgin_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="TextView"
+                android:textColor="#999999"
+                android:textSize="@dimen/text_size_hint"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/left_account"
+                app:layout_constraintStart_toEndOf="@+id/need_pay"
+                app:layout_constraintTop_toTopOf="@+id/need_pay" />
+
+            <TextView
+                android:id="@+id/chapter_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="60dp"
+                android:padding="6dp"
+                android:text="已选 0章"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="6dp"
+                android:text="价格: "
+                app:layout_constraintBaseline_toBaselineOf="@+id/need_pay"
+                app:layout_constraintStart_toStartOf="@+id/chapter_info" />
+
+            <TextView
+                android:id="@+id/need_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="6dp"
+                android:text="0红果币"
+                android:textColor="#f56c6c"
+                app:layout_constraintBottom_toTopOf="@+id/textView11"
+                app:layout_constraintStart_toEndOf="@+id/textView9" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="6dp"
+                android:text="余额："
+                app:layout_constraintBaseline_toBaselineOf="@+id/left_account"
+                app:layout_constraintStart_toStartOf="@+id/textView9" />
+
+            <TextView
+                android:id="@+id/left_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:padding="6dp"
+                android:text="加载中.."
+                android:textColor="#f56c6c"
+                app:layout_constraintStart_toEndOf="@+id/textView11"
+                app:layout_constraintTop_toBottomOf="@+id/chapter_info" />
+
+            <TextView
+                android:id="@+id/refresh_coin"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:paddingLeft="@dimen/common_margin"
+                android:paddingRight="@dimen/common_margin"
+                android:text="刷新"
+                app:layout_constraintBottom_toBottomOf="@+id/left_account"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/left_account" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/download_now"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_round_primary"
+            android:enabled="false"
+            android:gravity="center"
+            android:minHeight="@dimen/big_button_height"
+            android:text="请选择下载的章节"
+            android:textColor="@color/cr_primary"
+            skin:enable="true"
+            tools:ignore="MissingPrefix" />
+    </LinearLayout>
+</LinearLayout>

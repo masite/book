@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/adapter_item_row_line"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="提醒: 赠送红果币仅限红果原创书籍使用"
+        android:visibility="gone"
+        android:textColor="#999999" />
+
+    <TextView
+        android:id="@+id/vip_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:drawablePadding="5dp"
+        android:drawableStart="@mipmap/ic_vip_icon"
+        android:gravity="center_vertical"
+        android:text="开通方式" />
+
+
+    <TextView
+        android:id="@+id/weixin_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/ic_pay_weixin"
+        android:drawablePadding="16dp"
+        android:drawableRight="@drawable/sr_circle_check"
+        android:gravity="center_vertical"
+        android:minHeight="45dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="微信充值"
+        android:textColor="#3a3838"
+        android:textSize="@dimen/text_size_info" />
+
+    <TextView
+        android:id="@+id/alipay_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/ic_pay_alipay"
+        android:drawablePadding="16dp"
+        android:drawableRight="@drawable/sr_circle_check"
+        android:gravity="center_vertical"
+        android:minHeight="45dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="支付宝充值"
+        android:textColor="#3a3838"
+        android:textSize="@dimen/text_size_info" />
+
+
+
+</LinearLayout>

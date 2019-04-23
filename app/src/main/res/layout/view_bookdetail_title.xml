@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_white"
+    android:orientation="vertical">
+
+    <com.hongguo.read.widget.BookTitleContentView
+        android:id="@+id/book_title_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/view_bar_space" />
+
+        <com.hongguo.read.widget.CommonImageView
+            android:id="@+id/book_cover"
+            android:layout_width="@dimen/image_commend_width"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bar_space"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:layout_marginTop="@dimen/row_spacing"
+            android:background="@mipmap/ic_image_normal_default" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_alignTop="@+id/book_cover"
+            android:layout_marginLeft="@dimen/row_spacing"
+            android:layout_toRightOf="@+id/book_cover"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/book_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/row_spacing"
+                android:gravity="center"
+                android:text="系野风"
+                android:textColor="@color/base_white"
+                android:textSize="@dimen/text_size_info" />
+
+            <TextView
+                android:id="@+id/book_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/row_spacing"
+                android:gravity="center"
+                android:text="言情"
+                android:textColor="@color/base_white"
+                android:textSize="@dimen/text_size_info" />
+
+            <TextView
+                android:id="@+id/text_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/row_spacing"
+                android:gravity="center"
+                android:text="字数:60万"
+                android:textColor="@color/base_white"
+                android:textSize="@dimen/text_size_info" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/row_spacing"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/book_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="状态: 连载"
+                    android:textColor="@color/base_white"
+                    android:textSize="@dimen/text_size_info" />
+
+                <TextView
+                    android:id="@+id/vip_describe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_margin"
+                    android:background="@drawable/bg_round_primary"
+                    android:gravity="center"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="2dp"
+                    android:text="SVIP免费看"
+                    android:textColor="@color/base_white"
+                    android:textSize="10sp"
+                    android:visibility="gone"
+                    skin:enable="true"
+                    tools:ignore="MissingPrefix" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </com.hongguo.read.widget.BookTitleContentView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/user_award"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/row_spacing"
+            android:drawableTop="@mipmap/ic_user_award"
+            android:gravity="center"
+            android:text="打赏"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/user_read"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/row_spacing"
+            android:drawableTop="@mipmap/ic_user_read"
+            android:gravity="center"
+            android:text="--人阅读"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/vip_books"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/row_spacing"
+            android:drawableTop="@mipmap/ic_vip_book"
+            android:gravity="center"
+            android:text="会员"
+            android:textColor="@color/colorPrimary" />
+    </LinearLayout>
+
+
+    <include layout="@layout/adapter_item_row_line" />
+
+    <TextView
+        android:id="@+id/concern_us"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/ic_little_dot"
+        android:drawablePadding="5dp"
+        android:drawableRight="@mipmap/ic_red_more"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/big_button_height"
+        android:paddingLeft="@dimen/common_margin"
+        android:paddingRight="@dimen/common_margin"
+        android:text="关注红果小说公众号，获得更多精彩推荐！"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_size_info" />
+
+    <include layout="@layout/adapter_item_row_line" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:paddingTop="@dimen/row_spacing"
+        android:text="简介"
+        android:textColor="#333333"
+        android:textSize="@dimen/base_title_size"
+        android:visibility="gone" />
+
+    <com.hongguo.read.widget.CollapsibleTextView
+        android:id="@+id/book_descibe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/row_spacing"
+        android:paddingLeft="@dimen/common_margin"
+        android:paddingRight="@dimen/common_margin" />
+
+    <include
+        layout="@layout/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginTop="@dimen/row_spacing" />
+
+    <LinearLayout
+        android:id="@+id/last_update_chapter_layer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/big_button_height"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/common_margin"
+        android:paddingRight="@dimen/common_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="最新"
+            android:textColor="#333333"
+            android:textSize="@dimen/text_size_info" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:layout_marginRight="@dimen/row_spacing"
+            android:background="#e5e5e5" />
+
+        <TextView
+            android:id="@+id/last_chapter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:text="最新章节信息"
+            android:textColor="#666666"
+            android:lines="1"
+            android:textSize="@dimen/text_size_info" />
+
+        <TextView
+            android:id="@+id/last_update_chapter_name_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:drawablePadding="@dimen/row_spacing"
+            android:drawableRight="@mipmap/ic_more"
+            android:gravity="right"
+            android:lines="1"
+            android:text="1天"
+            android:textColor="#666666"
+            android:textSize="@dimen/text_size_info" />
+    </LinearLayout>
+
+    <include layout="@layout/view_line" />
+</LinearLayout>

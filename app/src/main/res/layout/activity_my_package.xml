@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_color"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/row_spacing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/common_margin"
+        android:paddingLeft="@dimen/common_margin"
+        android:paddingRight="@dimen/common_margin"
+        android:paddingTop="@dimen/common_margin">
+
+        <TextView
+            android:id="@+id/label_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的余额"
+            android:textColor="#3a3838"
+            android:textSize="@dimen/text_size_title" />
+
+        <TextView
+            android:id="@+id/label_coin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="红果币"
+            android:textColor="#3a3838"
+            android:textSize="@dimen/text_size_info" />
+
+        <TextView
+            android:id="@+id/current_coin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_toLeftOf="@+id/label_coin"
+            android:textColor="@color/colorPrimary"
+            android:text="---"
+            android:textSize="@dimen/text_size_info" />
+
+
+        <TextView
+            android:id="@+id/recharge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/label_money"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/sr_circle_accent_button"
+            android:gravity="center"
+            android:minHeight="38dp"
+            android:text="充值"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            tools:ignore="MissingPrefix"
+            skin:enable="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/recharge_histroy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/sr_common_list_white_bg"
+        android:drawableLeft="@mipmap/ic_recharge_history"
+        android:drawablePadding="16dp"
+        android:drawableRight="@mipmap/ic_right_dark_arrow"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/item_height"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="充值记录"
+        android:textColor="#333333"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/consume_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1px"
+        android:background="@drawable/sr_common_list_white_bg"
+        android:drawableLeft="@mipmap/ic_costume_history"
+        android:drawablePadding="16dp"
+        android:drawableRight="@mipmap/ic_right_dark_arrow"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/item_height"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="消费记录"
+        android:textColor="#333333"
+        android:textSize="16sp" />
+
+</LinearLayout>

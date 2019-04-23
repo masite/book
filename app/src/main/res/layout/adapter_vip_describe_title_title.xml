@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:background="@drawable/ic_svip_descibe_title"
+        android:gravity="center"
+        android:text="SVIP的特权"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/share_vip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:drawableLeft="@mipmap/ic_share_event_share"
+        android:drawablePadding="8dp"
+        android:gravity="center"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="分享"
+        android:textColor="#EA8400" />
+
+</FrameLayout>

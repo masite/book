@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/header"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/common_margin"
+    android:paddingRight="@dimen/common_margin">
+
+    <View
+        android:layout_width="3dp"
+        android:layout_height="12dp"
+        android:layout_marginRight="@dimen/row_spacing"
+        skin:enable="true"
+        tools:ignore="MissingPrefix"
+        android:background="@color/colorPrimary"
+        />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/middle_button_height"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:text="主编力荐"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_size_info"
+        />
+    
+    <TextView
+        android:id="@+id/more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/row_spacing"
+        android:drawableRight="@mipmap/ic_more"
+        android:gravity="center_vertical"
+        android:text="更多"
+        android:textColor="#666666"
+        android:visibility="gone"
+        />
+
+</LinearLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_marginBottom="@dimen/row_spacing"
+    android:background="@color/base_white"
+    app:layout_scrollFlags="scroll">
+
+    <ImageView
+        android:id="@+id/user_avatar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:background="@mipmap/ic_mine_avatar_bg"
+        android:padding="2dp"/>
+
+    <TextView
+        android:id="@+id/nick_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/user_avatar"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/user_avatar"
+        android:paddingTop="5dp"
+        android:text="尚未开通VIP"
+        android:textSize="@dimen/base_title_size"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/vip_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/nick_name"
+        android:layout_alignTop="@+id/nick_name"
+        android:layout_toRightOf="@+id/nick_name"
+        android:drawablePadding="10dp"
+        android:drawableRight="@mipmap/ic_vip_sign"
+        android:gravity="center"
+        android:textColor="#ffff4444"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/vip_describe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/user_avatar"
+        android:layout_alignLeft="@+id/nick_name"
+        android:paddingBottom="5dp"
+        android:text="点亮会员标识，即享畅阅无限"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/open_vip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_round_primary"
+
+        android:paddingBottom="5dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:paddingTop="5dp"
+        android:text="立即开通"
+        android:textColor="@color/base_white"
+        android:textSize="11sp"
+        skin:enable="true"
+        tools:ignore="MissingPrefix"/>
+
+    <ImageView
+        android:id="@+id/vip_avatar"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="5dp"
+        android:src="@mipmap/ic_store_viplogo"
+        android:visibility="gone"/>
+</RelativeLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:paddingTop="@dimen/common_margin">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_weight="1"
+        android:background="@drawable/sr_book_type_girl"
+        android:gravity="center"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:text="都市"
+        android:textColor="@color/cr_book_type"
+        android:textSize="@dimen/text_size_info"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_weight="1"
+        android:background="@drawable/sr_book_type_girl"
+        android:gravity="center"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:text="都市"
+        android:textColor="@color/cr_book_type"
+        android:textSize="@dimen/text_size_info"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:layout_weight="1"
+        android:background="@drawable/sr_book_type_girl"
+        android:gravity="center"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:text="都市"
+        android:textColor="@color/cr_book_type"
+        android:textSize="@dimen/text_size_info"
+        />
+
+</LinearLayout>

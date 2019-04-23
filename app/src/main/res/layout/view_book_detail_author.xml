@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/base_white"
+    android:orientation="vertical">
+
+    <include layout="@layout/adapter_item_row_line" />
+
+    <TextView
+        android:id="@+id/book_author"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginTop="8dp"
+        android:paddingBottom="2dp"
+        android:textColor="#666666"
+        android:textSize="@dimen/text_size_info" />
+
+    <TextView
+        android:id="@+id/author_describe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/common_margin"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:layout_marginTop="2dp"
+        android:paddingBottom="2dp"
+        android:lineSpacingExtra="4sp"
+        android:text="本书为红果阅读为大家提供无弹窗、无广告、最新最快的阅读体验，欢迎各位支持正版"
+        android:textColor="#999999"
+        android:textSize="@dimen/text_size_hint" />
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/request_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never" />
+
+
+    <include layout="@layout/view_line"/>
+    <TextView
+        android:id="@+id/copy_weixin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|center_vertical"
+        android:minHeight="@dimen/middle_button_height"
+        android:paddingLeft="@dimen/common_margin"
+        android:paddingRight="@dimen/common_margin"
+        android:text="更多问题反馈请关注红果阅读公众号：hongguo233"
+        android:textSize="@dimen/text_size_hint" />
+
+    <TextView
+        android:id="@+id/feedback"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/middle_button_height"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginBottom="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:background="@drawable/bg_round_primary"
+        skin:enable="true"
+        tools:ignore="MissingPrefix"
+        android:gravity="center"
+        android:text="问题还未解决？"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_info" />
+
+</LinearLayout>

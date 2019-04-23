@@ -1,0 +1,10 @@
+
+平常运行 将 APP_BASE_VERSION=""
+
+基本版本重新生成 (使用注意，只有在需要apk主动升级才使用，不然以前的查分信息都被删除，造成无法进行补丁文件生成 (补丁文件生成 >=2 版本的问题) )
+1、sh clearBase.sh
+2、sh buildProject.sh
+3、sh publish.sh
+
+正常补丁文件生成(读取的是build.gradle 中 APP_VERSION 和 APP_BASE_VERSION 两个字段)
+sh pack.sh

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/pay_choose"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:layout_marginTop="@dimen/row_spacing"
+        android:background="@drawable/bg_recharge_choose"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/row_spacing">
+
+        <TextView
+            android:id="@+id/money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6 元"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_info" />
+
+        <TextView
+            android:id="@+id/give"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/coin"
+            android:gravity="center"
+            android:text="包含(赠送4000)"
+            android:textColor="#333333"
+            android:textSize="@dimen/text_size_hint" />
+
+    </LinearLayout>
+
+    <com.hongguo.read.widget.RechargeGiveMark
+        android:id="@+id/event_describe"
+        android:layout_width="@dimen/big_button_height"
+        android:layout_height="@dimen/big_button_height"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="@dimen/common_margin"
+        android:layout_marginTop="@dimen/row_spacing"
+        android:background="@mipmap/ic_recharge_give">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="4dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-3dp"
+                android:gravity="center"
+                android:text="送"
+                android:textColor="@color/white"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/give_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text1"
+                android:layout_marginTop="-1dp"
+                android:gravity="center"
+                android:text="30 果币"
+                android:textColor="@color/white"
+                android:textSize="8sp" />
+        </LinearLayout>
+
+    </com.hongguo.read.widget.RechargeGiveMark>
+
+</RelativeLayout>

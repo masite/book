@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/adapter_item_row_line" />
+
+    <LinearLayout
+        android:id="@+id/reward_top_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/middle_button_height"
+            android:text="打赏TOP3"
+            android:textColor="#333333"
+            android:textSize="@dimen/text_size_title" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/common_margin"
+            android:drawablePadding="@dimen/row_spacing"
+            android:drawableRight="@mipmap/ic_more"
+            android:gravity="center_vertical"
+            android:text="更多"
+            android:textColor="#666666"
+            android:textSize="@dimen/text_size_info" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/reward_layer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="@dimen/row_spacing"
+        android:paddingBottom="@dimen/common_margin"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/row_spacing"
+            android:drawableTop="@mipmap/ic_reward_top_one"
+            android:gravity="center"
+            android:lines="1"
+            android:paddingLeft="@dimen/line_space"
+            android:paddingRight="@dimen/line_space"
+            android:text="用户昵称"
+            android:textColor="#666666"
+            android:textSize="@dimen/text_size_info" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/row_spacing"
+            android:drawableTop="@mipmap/ic_reward_top_two"
+            android:gravity="center"
+            android:lines="1"
+            android:paddingLeft="@dimen/line_space"
+            android:paddingRight="@dimen/line_space"
+            android:text="用户昵称"
+            android:textColor="#666666"
+            android:textSize="@dimen/text_size_info" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/row_spacing"
+            android:drawableTop="@mipmap/ic_reward_top_three"
+            android:gravity="center"
+            android:lines="1"
+            android:paddingLeft="@dimen/line_space"
+            android:paddingRight="@dimen/line_space"
+            android:text="用户昵称"
+            android:textColor="#666666"
+            android:textSize="@dimen/text_size_info" />
+
+    </LinearLayout>
+
+</LinearLayout>

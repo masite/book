@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_color"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <com.hongguo.common.widget.refresh.DesignRefreshRecyclerView
+        android:id="@+id/design_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <include layout="@layout/view_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:minHeight="@dimen/big_button_height"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:layout_marginRight="@dimen/common_margin"
+            android:layout_weight="1"
+            android:background="@drawable/bg_reply_edittext"
+            android:gravity="center">
+
+            <com.hongguo.read.widget.emoji.EmojiconEditText
+                android:id="@+id/emoji_edit"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_marginRight="@dimen/row_spacing"
+                android:layout_weight="1"
+                android:background="@color/base_transparent"
+                android:lines="1"
+                android:paddingLeft="@dimen/row_spacing"
+                android:paddingRight="@dimen/row_spacing"
+                android:textColor="#666666"
+                android:textSize="@dimen/text_size_hint" />
+
+            <ImageView
+                android:id="@+id/show_emoji"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginRight="@dimen/row_spacing"
+                android:src="@mipmap/ic_show_emoji" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/reply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/common_margin"
+            android:background="@drawable/bg_round_primary"
+            skin:enable="true"
+            tools:ignore="MissingPrefix"
+            android:gravity="center"
+            android:paddingBottom="@dimen/line_space"
+            android:paddingLeft="@dimen/common_margin"
+            android:paddingRight="@dimen/common_margin"
+            android:paddingTop="@dimen/line_space"
+            android:text="发送"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_info" />
+
+    </LinearLayout>
+
+    <include layout="@layout/view_line" />
+
+    <com.hongguo.read.widget.emoji.EmojiView
+        android:id="@+id/emoji_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/base_white" />
+
+</LinearLayout>

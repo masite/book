@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_reward_confirm_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/reward_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_round_primary"
+        skin:enable="true"
+        tools:ignore="MissingPrefix"
+        android:gravity="center"
+        android:paddingBottom="@dimen/row_spacing"
+        android:paddingLeft="@dimen/common_margin"
+        android:paddingRight="@dimen/common_margin"
+        android:paddingTop="@dimen/row_spacing"
+        android:text="确认打赏"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_hint"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/reward_cancel"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/reward_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_drak"
+        android:paddingBottom="@dimen/row_spacing"
+        android:paddingLeft="@dimen/common_margin"
+        android:paddingRight="@dimen/common_margin"
+        android:paddingTop="@dimen/row_spacing"
+        android:text="取消打赏"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_hint"
+        app:layout_constraintBottom_toBottomOf="@+id/reward_confirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/reward_confirm"
+        app:layout_constraintTop_toTopOf="@+id/reward_confirm" />
+
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="打赏无悔，谢谢支持"
+        android:textColor="#999999"
+        android:textSize="@dimen/text_size_hint"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/pay_choose"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/row_spacing"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView8"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/alipay_pay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/row_spacing"
+            android:drawableTop="@mipmap/ic_pay_alipay"
+            android:gravity="center"
+            android:text="支付宝"
+            android:textColor="#666666"
+            android:textSize="@dimen/text_size_hint" />
+
+        <TextView
+            android:id="@+id/weixin_pay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/common_margin"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/row_spacing"
+            android:drawableTop="@mipmap/ic_pay_weixin"
+            android:gravity="center"
+            android:text="微信"
+            android:textColor="#666666"
+            android:textSize="@dimen/text_size_hint" />
+    </LinearLayout>
+
+    <android.support.constraint.Group
+        android:id="@+id/coin_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="reward_confirm,reward_cancel" />
+
+
+</android.support.constraint.ConstraintLayout>

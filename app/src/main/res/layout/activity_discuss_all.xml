@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_color"
+    android:orientation="vertical">
+
+    <com.hongguo.common.widget.refresh.DesignRefreshRecyclerView
+        android:id="@+id/discuss_all"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never" />
+
+    <include layout="@layout/view_line"/>
+
+    <TextView
+        android:id="@+id/write_discuss"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:minHeight="@dimen/big_button_height"
+        android:background="@color/white"
+        android:text="写评论"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_size_info" />
+
+</LinearLayout>

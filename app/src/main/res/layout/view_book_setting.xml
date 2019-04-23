@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/setting_layer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#1a1a1a"
+    android:clickable="true"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/row_spacing"
+    android:paddingTop="@dimen/row_spacing"
+    android:visibility="visible"
+    app:layout_constraintBottom_toBottomOf="@+id/book_reader"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <TextView
+        android:id="@+id/book_menu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawablePadding="@dimen/row_spacing"
+        android:drawableTop="@mipmap/ic_reader_menu"
+        android:gravity="center"
+        android:text="目录"
+        android:textColor="#acacac" />
+
+    <TextView
+        android:id="@+id/book_light"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawablePadding="@dimen/row_spacing"
+        android:drawableTop="@drawable/sr_book_light_mode"
+        android:gravity="center"
+        android:text="白天"
+        android:textColor="#acacac" />
+
+    <TextView
+        android:id="@+id/book_setting"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawablePadding="@dimen/row_spacing"
+        android:drawableTop="@mipmap/ic_book_setting"
+        android:gravity="center"
+        android:text="设置"
+        android:textColor="#acacac" />
+
+    <TextView
+        android:id="@+id/discuss"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawablePadding="@dimen/row_spacing"
+        android:drawableTop="@mipmap/ic_reader_discuss"
+        android:gravity="center"
+        android:text="评论"
+        android:textColor="#acacac" />
+
+</LinearLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="show_emoji" type="id" />
+    <item name="emoji_edit" type="id" />
+</resources>

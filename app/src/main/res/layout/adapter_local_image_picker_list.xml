@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/sr_common_list_white_bg"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/row_spacing"
+        android:paddingLeft="@dimen/row_spacing"
+        android:paddingTop="@dimen/row_spacing">
+
+        <ImageView
+            android:id="@+id/first_image"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_image_normal_default" />
+
+        <TextView
+            android:id="@+id/dir_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:layout_marginRight="@dimen/common_margin"
+            android:drawableRight="@mipmap/ic_right_arrow"
+            android:text="最新照片(200)"
+            android:textColor="#333333"
+            android:textSize="@dimen/text_size_info" />
+
+    </LinearLayout>
+
+    <include layout="@layout/view_line" />
+</LinearLayout>

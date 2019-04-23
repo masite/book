@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <include layout="@layout/adapter_free_title"/>
+
+    <LinearLayout
+        android:id="@+id/first_book"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#ffffff"
+        android:padding="16dp"
+        >
+
+        <com.hongguo.common.widget.CommonImageView
+            android:id="@+id/book_image"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/book_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="女总裁战阵王"
+                android:textColor="#333333"
+                android:textSize="16dp"
+                />
+
+            <TextView
+                android:id="@+id/book_descibe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:lineSpacingExtra="4sp"
+                android:lines="2"
+                android:text="宽甸,"
+                android:ellipsize="end"
+                android:textColor="#666666"
+                android:textSize="16sp"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:id="@+id/book_auther"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="宁道远"
+                    android:textColor="#999999"
+                    android:textSize="16sp"
+                    />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/bg_free_words"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:id="@+id/word_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingTop="4dp"
+                        android:text="2000万字"
+                        android:textColor="#999999"
+                        android:textSize="14sp"
+                        />
+
+                    <TextView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#E3E3E3"
+                        />
+
+                    <TextView
+                        android:id="@+id/book_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingTop="4dp"
+                        android:text="都市"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="14sp"
+                        />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

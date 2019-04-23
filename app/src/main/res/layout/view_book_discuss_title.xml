@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/base_white">
+
+    <include
+        android:id="@+id/row_line"
+        layout="@layout/adapter_item_row_line"/>
+
+    <TextView
+        android:layout_below="@id/row_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:minHeight="@dimen/big_button_height"
+        android:paddingLeft="@dimen/common_margin"
+        android:text="书评"
+        android:textColor="#333333"
+        android:textSize="@dimen/text_size_title" />
+
+    <TextView
+        android:minHeight="@dimen/big_button_height"
+        android:gravity="center"
+        android:layout_below="@id/row_line"
+        android:id="@+id/discuss_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingRight="@dimen/common_margin"
+        android:text="1189人评论"
+        android:textColor="#666666"
+        android:drawableRight="@mipmap/ic_more"
+        android:drawablePadding="@dimen/row_spacing"
+        android:textSize="@dimen/text_size_info" />
+
+</RelativeLayout>

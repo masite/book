@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:minHeight="@dimen/item_height"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/line_space"
+        android:paddingBottom="@dimen/line_space"
+        android:paddingLeft="@dimen/common_margin"
+        android:paddingRight="@dimen/common_margin">
+
+        <TextView
+            android:id="@+id/payAmount"
+            android:layout_width="2dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="充值 1 元"
+            android:textColor="#333333"
+            android:textSize="@dimen/text_size_info" />
+
+        <TextView
+            android:id="@+id/payMethod"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/row_spacing"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="支付宝"
+            android:textColor="#333333"
+            android:textSize="@dimen/text_size_info" />
+
+        <TextView
+            android:id="@+id/create_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/row_spacing"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="2013-12-12"
+            android:textColor="#999999"
+            android:textSize="@dimen/text_size_hint" />
+
+    </LinearLayout>
+
+    <include layout="@layout/view_line" />
+
+</LinearLayout>

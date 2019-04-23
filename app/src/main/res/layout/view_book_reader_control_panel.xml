@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/book_control_panel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f4272727"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:visibility="visible"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="1.0">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/big_button_height"
+        android:layout_marginTop="@dimen/row_spacing"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="@dimen/common_margin"
+            android:text="字号"
+            android:textColor="#acacac"
+            android:textSize="@dimen/text_size_info" />
+
+        <ImageView
+            android:id="@+id/sub_text_size"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:layout_weight="1"
+            android:background="@drawable/bg_book_panel_white_border"
+            android:paddingBottom="@dimen/row_spacing"
+            android:paddingTop="@dimen/row_spacing"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_book_words_sub" />
+
+        <TextView
+            android:id="@+id/text_size"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="500"
+            android:textColor="#999999"
+            android:textSize="@dimen/text_size_info" />
+
+
+        <ImageView
+            android:id="@+id/add_text_size"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:layout_weight="1"
+            android:background="@drawable/bg_book_panel_white_border"
+            android:paddingBottom="@dimen/row_spacing"
+            android:paddingTop="@dimen/row_spacing"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_book_words_add" />
+
+        <TextView
+            android:id="@+id/word_size_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/common_margin"
+            android:gravity="center"
+            android:paddingBottom="@dimen/line_space"
+            android:paddingLeft="@dimen/common_margin"
+            android:paddingRight="@dimen/common_margin"
+            android:paddingTop="@dimen/line_space"
+            android:text="标准"
+            android:textColor="#acacac"
+            android:textSize="@dimen/text_size_info" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/big_button_height"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="@dimen/common_margin"
+            android:text="间距"
+            android:textColor="#acacac"
+            android:textSize="@dimen/text_size_info" />
+
+        <ImageView
+            android:id="@+id/book_space_one"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/row_spacing"
+            android:paddingTop="@dimen/row_spacing"
+            android:scaleType="centerInside"
+            android:src="@drawable/sr_book_space_style_one" />
+
+        <ImageView
+            android:id="@+id/book_space_two"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/row_spacing"
+            android:paddingTop="@dimen/row_spacing"
+            android:scaleType="centerInside"
+            android:src="@drawable/sr_book_space_style_two" />
+
+        <ImageView
+            android:id="@+id/book_space_three"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/row_spacing"
+            android:paddingTop="@dimen/row_spacing"
+            android:scaleType="centerInside"
+            android:src="@drawable/sr_book_space_style_three" />
+
+
+        <TextView
+            android:id="@+id/default_book_space"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/common_margin"
+            android:gravity="center"
+            android:paddingBottom="@dimen/line_space"
+            android:paddingLeft="@dimen/common_margin"
+            android:paddingRight="@dimen/common_margin"
+            android:paddingTop="@dimen/line_space"
+            android:text="标准"
+            android:textColor="#acacac"
+            android:textSize="@dimen/text_size_info" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/big_button_height"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="@dimen/common_margin"
+            android:text="亮度"
+            android:textColor="#acacac"
+            android:textSize="@dimen/text_size_info" />
+
+        <android.support.v7.widget.AppCompatSeekBar
+            android:id="@+id/light_control"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:layout_weight="1"
+            android:max="255"
+            android:maxHeight="3dp"
+            android:minHeight="3dp"
+            android:progressDrawable="@drawable/bg_white_seekbar"
+            android:splitTrack="false"
+            android:thumb="@mipmap/ic_book_seek_thumb" />
+
+        <TextView
+            android:id="@+id/default_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/common_margin"
+            android:gravity="center"
+            android:paddingBottom="@dimen/line_space"
+            android:paddingLeft="@dimen/common_margin"
+            android:paddingRight="@dimen/common_margin"
+            android:paddingTop="@dimen/line_space"
+            android:text="系统"
+            android:textColor="#acacac"
+            android:textSize="@dimen/text_size_info" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/big_button_height"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="@dimen/common_margin"
+            android:text="背景"
+            android:textColor="#acacac"
+            android:textSize="@dimen/text_size_info" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/book_bg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:layout_marginRight="@dimen/common_margin"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/big_button_height"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/common_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="@dimen/common_margin"
+            android:text="翻页"
+            android:textColor="#acacac"
+            android:textSize="@dimen/text_size_info" />
+
+        <RadioGroup
+            android:id="@+id/anim_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView14"
+            app:layout_constraintTop_toBottomOf="@+id/default_light">
+
+            <RadioButton
+                android:id="@+id/anim_style_emulate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_margin"
+                android:layout_weight="1"
+                android:background="@drawable/bg_book_panel_white_border"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingBottom="6dp"
+                android:paddingTop="6dp"
+                android:text="仿真"
+                android:textColor="@color/cr_book_anim_text" />
+
+            <RadioButton
+                android:id="@+id/anim_style_cover"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_margin"
+                android:layout_weight="1"
+                android:background="@drawable/bg_book_panel_white_border"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingBottom="6dp"
+                android:paddingTop="6dp"
+                android:text="覆盖"
+                android:textColor="@color/cr_book_anim_text" />
+
+            <RadioButton
+                android:id="@+id/anim_style_up_down"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_margin"
+                android:layout_weight="1"
+                android:background="@drawable/bg_book_panel_white_border"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingBottom="6dp"
+                android:paddingTop="6dp"
+                android:text="上下"
+                android:textColor="@color/cr_book_anim_text" />
+
+            <RadioButton
+                android:id="@+id/anim_style_none"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_margin"
+                android:layout_weight="1"
+                android:background="@drawable/bg_book_panel_white_border"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingBottom="6dp"
+                android:paddingTop="6dp"
+                android:text="无"
+                android:textColor="@color/cr_book_anim_text" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+</LinearLayout>

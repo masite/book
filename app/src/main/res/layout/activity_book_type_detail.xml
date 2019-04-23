@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_color"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <com.hongguo.common.widget.refresh.DesignRefreshRecyclerView
+        android:id="@+id/book_type_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/choose_layer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minHeight="@dimen/middle_button_height"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/choose_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="女频 伦理 完结 畅销"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/row_spacing"
+                android:rotation="90"
+                android:text=">"
+                android:textColor="@color/colorPrimary" />
+        </LinearLayout>
+
+        <include layout="@layout/view_line" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/float_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:minHeight="@dimen/middle_button_height"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+        <include layout="@layout/view_line" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

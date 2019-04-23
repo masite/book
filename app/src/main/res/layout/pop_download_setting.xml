@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/row_spacing"
+        android:src="@mipmap/ic_pop_arrow" />
+
+    <LinearLayout
+        android:id="@+id/menu_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_home_pop_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/all_chapter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ic_all_chapter"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/middle_button_height"
+            android:paddingRight="8dp"
+            android:text="所有章节"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#e5e5e5" />
+
+        <TextView
+            android:id="@+id/all_free"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ic_all_free"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/middle_button_height"
+            android:paddingRight="8dp"
+            android:text="所有免费"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#e5e5e5" />
+
+        <TextView
+            android:id="@+id/all_need_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ic_all_need_pay"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/middle_button_height"
+            android:paddingRight="8dp"
+            android:text="所有付费"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>

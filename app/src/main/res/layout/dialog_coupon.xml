@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_coupon_dialog"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_margin"
+        android:src="@mipmap/ic_dialog_djq" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="暂无可用优惠券"
+        android:textColor="#6a6a6a"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/user_know"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/bg_coupon_btn"
+        android:gravity="center"
+        android:minHeight="@dimen/big_button_height"
+        android:text="我知道了 "
+        android:textColor="#ffffff"
+        android:textSize="@dimen/text_size_info" />
+
+
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/base_white"
+    android:orientation="vertical">
+
+    <include layout="@layout/adapter_item_row_line" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:minHeight="@dimen/big_button_height"
+        android:paddingLeft="@dimen/common_margin"
+        android:text="作者其他作品"
+        android:textColor="#333333"
+        android:textSize="@dimen/base_title_size" />
+
+</LinearLayout>

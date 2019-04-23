@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/include6"
+        layout="@layout/adapter_item_row_line"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/row_spacing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/label_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="我的余额"
+        android:textColor="#3a3838"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include6" />
+
+    <TextView
+        android:id="@+id/label_coin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="8dp"
+        android:text="红果币"
+        android:textColor="#3a3838"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/label_money"
+        app:layout_constraintTop_toTopOf="@+id/label_money" />
+
+    <TextView
+        android:id="@+id/label_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/label_money"
+        android:layout_marginTop="16dp"
+        android:text="充值账号"
+        android:textColor="#3a3838"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/label_money"
+        app:layout_constraintTop_toBottomOf="@+id/label_money" />
+
+    <TextView
+        android:id="@+id/account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/label_account"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="8dp"
+        android:textColor="#3a3838"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/label_account"
+        app:layout_constraintTop_toTopOf="@+id/label_account" />
+
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/adapter_item_row_line"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/row_spacing"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_account" />
+
+    <TextView
+        android:id="@+id/label_pay_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/big_button_height"
+        android:text="支付方式"
+        android:textColor="#333333"
+        android:textSize="@dimen/text_size_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include2" />
+
+    <TextView
+        android:id="@+id/weixin_pay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:drawableLeft="@mipmap/ic_pay_weixin"
+        android:drawablePadding="@dimen/common_margin"
+        android:drawableRight="@drawable/sr_circle_check"
+        android:gravity="left|center"
+        android:minHeight="@dimen/item_height"
+        android:text="微信"
+        android:textColor="#333333"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include4" />
+
+    <include
+        android:id="@+id/include4"
+        layout="@layout/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_pay_type" />
+
+    <include
+        android:id="@+id/include3"
+        layout="@layout/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginRight="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weixin_pay" />
+
+    <TextView
+        android:id="@+id/alipay_pay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:drawableLeft="@mipmap/ic_pay_alipay"
+        android:drawablePadding="@dimen/common_margin"
+        android:drawableRight="@drawable/sr_circle_check"
+        android:gravity="left|center"
+        android:minHeight="@dimen/item_height"
+        android:text="支付宝"
+        android:textColor="#333333"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include3" />
+
+    <include
+        android:id="@+id/include5"
+        layout="@layout/adapter_item_row_line"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/row_spacing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alipay_pay" />
+
+    <TextView
+        android:id="@+id/label_choose_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/big_button_height"
+        android:text="选择金额"
+        android:textColor="#333333"
+        android:textSize="@dimen/text_size_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include5" />
+
+    <TextView
+        android:id="@+id/message_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="温馨提醒:1元=100红果币"
+        android:textColor="#999999"
+        android:textSize="@dimen/text_size_hint"
+        app:layout_constraintBottom_toBottomOf="@+id/label_choose_money"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/label_choose_money"
+        app:layout_constraintTop_toTopOf="@+id/label_choose_money" />
+
+</android.support.constraint.ConstraintLayout>

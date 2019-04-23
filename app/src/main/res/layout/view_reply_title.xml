@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/user_avatar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:text="用户名称"
+        android:textColor="#549cda"
+        android:textSize="@dimen/text_size_info"
+        app:layout_constraintEnd_toStartOf="@+id/reply_time"
+        app:layout_constraintStart_toEndOf="@+id/user_avatar"
+        app:layout_constraintTop_toTopOf="@+id/user_avatar" />
+
+    <com.hongguo.read.widget.emoji.EmojiconTextView
+        android:id="@+id/discuss_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/row_spacing"
+        android:lineSpacingExtra="4sp"
+        android:text="用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论"
+        android:textColor="#666666"
+        android:textSize="@dimen/text_size_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/user_avatar" />
+
+    <TextView
+        android:id="@+id/reply_time"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="评论时间"
+        android:textColor="#999999"
+        android:textSize="@dimen/text_size_hint"
+        app:layout_constraintBottom_toBottomOf="@+id/user_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/user_name" />
+
+    <TextView
+        android:id="@+id/reply_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="回复数量"
+        android:textColor="#999999"
+        android:textSize="@dimen/text_size_hint"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@+id/discuss_content"
+        app:layout_constraintTop_toBottomOf="@+id/discuss_content" />
+
+
+    <include
+        android:id="@+id/line"
+        layout="@layout/adapter_item_row_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/row_spacing"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/reply_number"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/all_discuss"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/middle_button_height"
+        android:text="全部评论"
+        android:textColor="#333333"
+        android:textSize="@dimen/text_size_title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line" />
+
+</android.support.constraint.ConstraintLayout>

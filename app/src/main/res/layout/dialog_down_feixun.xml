@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#d6d6d6"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:minHeight="50dp"
+        android:text="需要先安装语音插件"
+        android:textColor="#525252"
+        android:textSize="16sp" />
+
+    <include layout="@layout/view_line" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:lineSpacingExtra="8sp"
+        android:text="下载并安装人声朗读软件:可免流量体验不同声音的读书（语音技术由科大讯飞提供支持）"
+        android:textColor="#525252"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/down_xun_fei"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/common_margin"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_round_primary"
+        android:gravity="center"
+        android:minHeight="@dimen/big_button_height"
+        android:text="下载语音插件"
+        android:textColor="@color/cr_primary"
+        android:textSize="14sp" />
+
+</LinearLayout>

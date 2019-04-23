@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/vip_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/big_button_height"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:drawablePadding="@dimen/row_spacing"
+        android:drawableStart="@mipmap/ic_vip_icon"
+        android:gravity="center_vertical"
+        android:text="红果套餐"
+        />
+
+</LinearLayout>

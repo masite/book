@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/reader_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#1a1a1a"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trans_tool">
+
+        <ImageView
+            android:id="@+id/chatper_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/common_margin"
+            android:paddingRight="@dimen/common_margin"
+            app:srcCompat="@mipmap/ic_book_back" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+
+        <TextView
+            android:id="@+id/book_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLength="13"
+            android:textColor="#3b3b3b"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/read_report"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_toLeftOf="@+id/read_mode"
+            android:paddingLeft="@dimen/row_spacing"
+            android:paddingRight="@dimen/row_spacing"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_book_report"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/read_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_toLeftOf="@+id/chapter_refresh"
+            android:paddingLeft="@dimen/row_spacing"
+            android:paddingRight="@dimen/row_spacing"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_read_mode"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/chapter_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_toLeftOf="@+id/book_share"
+            android:paddingLeft="@dimen/row_spacing"
+            android:paddingRight="@dimen/row_spacing"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_book_refresh"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/book_share"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="8dp"
+            android:paddingLeft="@dimen/row_spacing"
+            android:paddingRight="@dimen/row_spacing"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_book_share"
+            android:textColor="@color/white" />
+
+
+    </RelativeLayout>
+
+
+    <com.losg.library.widget.TransStatusBar
+        android:id="@+id/trans_tool"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1a1a1a"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</merge>

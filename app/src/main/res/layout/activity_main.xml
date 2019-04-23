@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_color"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fragment_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="45dp" />
+
+    <LinearLayout
+        android:id="@+id/menu_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/ic_menu_bg">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <com.hongguo.read.widget.MenuContenter
+        android:id="@+id/menu_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:Menu_menuMargin="4dp"
+        app:Menu_textSize="12sp" />
+
+
+    <ImageView
+        android:id="@+id/event_image"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/menu_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="32dp"
+        android:clickable="true"
+        android:paddingRight="16dp"
+        android:visibility="gone" />
+
+</RelativeLayout>
